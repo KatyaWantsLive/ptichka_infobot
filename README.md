@@ -36,8 +36,23 @@ https://pitch.com/v/ptichkabot-jbz5gu
 
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/dbgraph.png)
 
-## Классификатор вторсырья (Обучаем нейронку, к защите будет)
-
+## Классификатор вторсырья
+### Классы:
+- Стекло
+- Металл
+- Пластик
+### Параметры обучения:
+- Предобученная модель: Resnet18
+- Функция потерь: CrossEntropy
+- Оптимизатор: SGD
+### Соотношение классов:
+- Tensor 0 - Plastic 
+- Tensor 1 - Glass
+- Tensor 2 - Metal
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/labels.png)
+### Изображения в датасете:
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tenzors.png)
+### Точность:
 
 ## Cтек технологий
 ### Софт:
@@ -46,12 +61,16 @@ https://pitch.com/v/ptichkabot-jbz5gu
 - Нейронная сеть: Google Colab 
 - Бот: Visual Studio Code
 ### Язык:
-Python
+- Python
 ### Фреймворки:
-- 
+- PyTorch
 ### Библиотеки:
-- 
-
+- Aiogram
+- NumPy
+- MatPlotLib
+- Pandas
+- Pillow
+  
 ## Запуск
 
 Python версия 3.12

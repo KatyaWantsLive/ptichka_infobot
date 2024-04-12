@@ -74,6 +74,7 @@ https://pitch.com/v/ptichkabot-jbz5gu
 - MatPlotLib
 - Pandas
 - Pillow
+- SQLAlchemy
   
 ## Запуск
 

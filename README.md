@@ -30,6 +30,8 @@
 
 ## Структура Базы данных
 
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/dbgraph.png)
+
 ## Классификатор вторсырья
 
 ## Cтек технологий

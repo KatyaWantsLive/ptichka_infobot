@@ -49,9 +49,13 @@ https://pitch.com/v/ptichkabot-jbz5gu
 - Tensor 0 - Plastic 
 - Tensor 1 - Glass
 - Tensor 2 - Metal
+
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/labels.png)
+
 ### Изображения в датасете:
+
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tenzors.png)
+
 ### Точность:
 
 ## Cтек технологий

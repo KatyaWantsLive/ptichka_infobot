@@ -79,6 +79,34 @@ https://pitch.com/v/ptichkabot-jbz5gu
 
 Python версия 3.12
 
+Клонирование репозитория:
+
 ```bash
-надо тут что-то умное написать
+git clone https://github.com/KatyaWantsLive/ptichka_infobot
+cd ptichka_infobot
 ```
+
+Работа с виртуальным окружением:
+
+```bash
+python3 -m venv venv
+source venv\Scripts\activate.bat
+```
+
+Токен нужно получить у @BotFather и подставить его в значение TOKEN:
+
+```bash
+echo "TELEGRAM_BOT_TOKEN = ""
+DB_PATH = "db/db.sqlite3" > .env
+```
+
+Обновление pip, установка зависимостей и запуск:
+
+```bash
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+python3 ptichka_infobot/main.py
+```
+
+
+

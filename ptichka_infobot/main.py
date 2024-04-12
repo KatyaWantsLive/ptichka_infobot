@@ -1,16 +1,14 @@
 import logging
 import asyncio
 
-from app.handlers.main import router
-from loader import bot, dp, router
+from loader import bot, dp
 from app.db.models import async_main
-from app.handlers.Contact import router
-from app.handlers.rules import router
-from app.handlers.about_us import router
+
+from app.handlers.router import include_routers
 
 async def main():
     await async_main()
-    dp.include_router(router)
+    include_routers()
     await dp.start_polling(bot)
 
 

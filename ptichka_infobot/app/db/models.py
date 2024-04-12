@@ -14,6 +14,7 @@ class User(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     tg_id = mapped_column(BigInteger)
+    is_admin = mapped_column(Boolean(), default=False) 
 
 
 class Event(Base):

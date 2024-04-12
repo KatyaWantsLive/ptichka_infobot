@@ -2,7 +2,7 @@ from aiogram import F
 from aiogram.types import Message, CallbackQuery
 from loader import router
 
-import app.keyboards.ruleskb as kb
+import app.keyboards.ruleskb.ruleskb as kb
 
 @router.message(F.text == 'Правила сдачи')
 async def about_us(message: Message):

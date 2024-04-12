@@ -1,9 +1,10 @@
-from aiogram import F
+from aiogram import F, Router
 from aiogram.types import Message, CallbackQuery
-from loader import router
 
 
-import app.keyboards.about_uskb as kb
+router = Router()
+
+import app.keyboards.about_uskb.about_uskb as kb
 from app.db.requests import get_address_description
 
 @router.message(F.text == 'О нас')

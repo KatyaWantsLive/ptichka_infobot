@@ -1,10 +1,11 @@
-from aiogram import F
+from aiogram import F, Router
 from aiogram.types import Message, CallbackQuery
 from loader import router
 
 
-import app.keyboards.contactkb as kb
+import app.keyboards.contactkb.contactkb as kb
 
+router = Router()
 
 @router.message(F.text == 'Контакты')
 async def about_us(message: Message):

@@ -16,7 +16,7 @@ async def about_us(message: Message):
 @router.callback_query(F.data == 'Event')
 async def event(callback: CallbackQuery):
     await callback.answer('')
-    await callback.message.edit_text('Ивенты', reply_markup = await kb.event())
+    await callback.message.edit_text('Мероприятия', reply_markup = await kb.event())
 
 @router.callback_query(F.data == 'to_about_us')
 async def to_about_us(callback: CallbackQuery):

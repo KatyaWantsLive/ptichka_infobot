@@ -14,7 +14,7 @@ device = (
     else "cpu"
 )
 
-modeldamage = torch.load('D:/test/ptichka_infobot/recycling.pth',  map_location=torch.device('cpu'))
+modeldamage = torch.load('ptichka_infobot/recycling.pth',  map_location=torch.device('cpu'))
 
 def defect(img):
     image = Image.open(img)
@@ -30,6 +30,4 @@ def defect(img):
     pred = prediction.cpu().detach().numpy()
     pred = np.exp(pred) / np.exp(pred).sum()
     lbl = np.argmax(pred)
-    return f'Это похоже на => {'Пластик' if lbl == 0 else 'Металл'}'
-
-image_path = 'D:/test/ptichka_infobot/2.jpg'
+    return f'Это похоже на {'Пластик' if lbl == 0 else 'Металл'}'

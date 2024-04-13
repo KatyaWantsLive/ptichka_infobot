@@ -7,7 +7,7 @@ import app.keyboards.contactkb.contactkb as kb
 
 router = Router()
 
-@router.message(F.text == 'Контакты')
+@router.message(F.text == '📞Контакты')
 async def about_us(message: Message):
     await message.delete()
     await message.answer('Контакты', reply_markup=kb.contacts)
@@ -15,7 +15,7 @@ async def about_us(message: Message):
 @router.callback_query(F.data == 'questions')
 async def cooperation(callback: CallbackQuery):
     await callback.answer('')
-    await callback.message.edit_text('Номер телефона: 89322484552 \nГруппа в вк: https://vk.com/ptichka_punkt', reply_markup=kb.back)
+    await callback.message.edit_text('Номер телефона: +7 (932) 248 45 52 \nГруппа в вк: https://vk.com/ptichka_punkt', reply_markup=kb.back)
 
 @router.callback_query(F.data == 'back_to_contacts')
 async def back(callback: CallbackQuery):

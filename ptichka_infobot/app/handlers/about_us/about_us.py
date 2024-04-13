@@ -7,7 +7,7 @@ router = Router()
 import app.keyboards.about_uskb.about_uskb as kb
 from app.db.requests import get_address_description, get_event_description
 
-@router.message(F.text == 'О нас')
+@router.message(F.text == '🙋‍♂️О нас')
 async def about_us(message: Message):
     await message.delete()
     await message.answer('О нас', reply_markup=kb.about_us)

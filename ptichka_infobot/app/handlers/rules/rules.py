@@ -7,7 +7,7 @@ from aiogram.utils.media_group import MediaGroupBuilder
 
 import app.keyboards.ruleskb.ruleskb as kb
 
-@router.message(F.text == 'Правила сдачи')
+@router.message(F.text == '📜Правила сдачи')
 async def about_us(message: Message):
     await message.delete()
     await message.answer('Правила сдачи', reply_markup=kb.rules)

@@ -7,8 +7,8 @@ from loader import dp
 
 def include_routers():
     routers = [
-        about_router,
         admin_router,
+        about_router,
         contact_router,
         command_router,
         rules_router

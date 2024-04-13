@@ -3,6 +3,15 @@ from app.db.models import User, Event, Address
 from sqlalchemy import select, delete
 
 
+async def set_event(data):
+    async with async_session() as session:
+        addres = await session.scalar(select(Event).where(Event.event_name == data['name']))
+
+        if not addres:
+            session.add(Event(event_name = data['name'], event_description = data['description']))
+            await session.commit()
+
+
 async def set_addres(data):
     async with async_session() as session:
         addres = await session.scalar(select(Address).where(Address.street == data['name']))
@@ -26,8 +35,22 @@ async def get_addres():
         result = await session.execute(query)
         return result.scalars().all()
     
+async def get_event():
+    async with async_session() as session:
+        query = select(Event)
+        result = await session.execute(query)
+        return result.scalars().all()
+
+
+async def get_event_description(event_id):
+    async with async_session() as session:
+        query = select(Event.event_description).where(Event.id == event_id)
+        result = await session.execute(query)
+        return result.scalars().one()
+    
 async def get_address_description(address_id):
     async with async_session() as session:
+        print('123')
         query = select(Address.address_description).where(Address.id == address_id)
         result = await session.execute(query)
         return result.scalars().one()
@@ -41,8 +64,8 @@ async def get_user_status(tg_id):
             return user.is_admin
         else: return False
 
-async def delete_work_site(addres_id):
+async def delete_address(addres_id):
     async with async_session() as session:
         query = delete(Address).where(Address.id == addres_id)
-        await session. execute(query)
+        await session.execute(query)
         await session.commit()

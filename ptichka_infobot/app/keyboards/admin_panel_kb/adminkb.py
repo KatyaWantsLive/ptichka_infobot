@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-from app.db.requests import get_addres
+from app.db.requests import get_addres, get_event
 
 admin = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = 'Внести изменения', callback_data='make_changes')],
@@ -23,6 +23,12 @@ work_sitekb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = 'Назад', callback_data='to_select')]
 ])
 
+eventkb = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text='добавить ивент', callback_data='add_event')],
+    [InlineKeyboardButton(text='Удалить ивент', callback_data='delete_event')],
+    [InlineKeyboardButton(text = 'Назад', callback_data='to_select')]
+])
+
 async def addreses():
     all_address = await get_addres()
     keyboard = InlineKeyboardBuilder()
@@ -31,10 +37,10 @@ async def addreses():
     keyboard.add(InlineKeyboardButton(text = 'Назад', callback_data='to_changekb'))    
     return keyboard.adjust(1).as_markup()
 
-async def addreses_to_make():
-    all_address = await get_addres()
+async def event():
+    all_event = await get_event()
     keyboard = InlineKeyboardBuilder()
-    for address in all_address:
-        keyboard.add(InlineKeyboardButton(text = address.street, callback_data = f'address_make_{address.id}'))
-    keyboard.add(InlineKeyboardButton(text = 'Назад', callback_data='to_changekb'))    
-    return keyboard.adjust(1).as_markup()
+    for event in all_event:
+        keyboard.add(InlineKeyboardButton(text = event.event_name, callback_data = f'event_{event.id}'))
+    keyboard.add(InlineKeyboardButton(text = 'Назад', callback_data='to_about_us'))    
+    return keyboard.adjust(2).as_markup()

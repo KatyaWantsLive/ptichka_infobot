@@ -13,12 +13,11 @@ router = Router()
 async def cmd_start(message: Message):
     await rq.set_user(message.from_user.id)
     if await rq.get_user_status(message.from_user.id) == True:
-        await message.answer('Убйете меня нахуй', reply_markup=kb.main_admin)
-    else: await message.answer('Убйете меня нахуй', reply_markup=kb.main)
+        await message.answer('Привет! Я телеграм-бот "Птичка, помощник в мире разумного потребления!', reply_markup=kb.main_admin)
+    else: await message.answer('Привет! Я телеграм-бот "Птичка, помощник в мире разумного потребления!', reply_markup=kb.main)
     await message.answer_sticker('CAACAgIAAxkBAAEEpw5mF95a18_KKLecDsJP8WKI0w2jtgACQkIAAkW6iUhj3hKdzjuC5jQE')
 
-@router.message(F.text == 'АдМиНкА')
+@router.message(F.text == 'Админ панель')
 async def admin_panel(message: Message):
     if await rq.get_user_status(message.from_user.id) == True:
         await message.answer(f'Добро пожаловать в админ-панель, {message.from_user.first_name}', reply_markup=keyboard.admin)
-    else: await message.answer(f'иди нахуй пидор')

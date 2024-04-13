@@ -6,7 +6,7 @@ from app.db.requests import get_event ,get_addres
 about_us = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = 'Как мы работаем?', callback_data='how_work'),
      InlineKeyboardButton(text = 'Мероприятия', callback_data='Event')],
-     [InlineKeyboardButton(text='На глвную', callback_data='go_home')]
+     [InlineKeyboardButton(text='На главную', callback_data='go_home')]
 ])
 
 back_to_address = InlineKeyboardMarkup(inline_keyboard=[

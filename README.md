@@ -1,4 +1,4 @@
-# Кейс: Телеграм бот "Птичка"
+# Кейс: Телеграм бот *"Птичка"*
 ## Описание
 Телеграмм-бот созданный для автоматизации процесса информирования жителей Сургута о правилах сдачи, помощи в определении типа вторсырья, графиках работы пунктов, проводимых мероприятиях. 
 
@@ -38,7 +38,6 @@
 
 ## Классификатор вторсырья
 ### Классы:
-- Стекло
 - Металл
 - Пластик
 ### Параметры обучения:
@@ -47,14 +46,13 @@
 - Оптимизатор: SGD
 ### Соотношение классов:
 - Tensor 0 - Plastic 
-- Tensor 1 - Glass
-- Tensor 2 - Metal
+- Tensor 1 - Metal
 
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/labels.png)
 
 ### Изображения в датасете:
 
-![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tenzors.png)
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tensors.png)
 
 ### Точность:
 

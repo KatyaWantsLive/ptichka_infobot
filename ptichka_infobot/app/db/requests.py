@@ -50,7 +50,6 @@ async def get_event_description(event_id):
     
 async def get_address_description(address_id):
     async with async_session() as session:
-        print('123')
         query = select(Address.address_description).where(Address.id == address_id)
         result = await session.execute(query)
         return result.scalars().one()
@@ -67,5 +66,11 @@ async def get_user_status(tg_id):
 async def delete_address(addres_id):
     async with async_session() as session:
         query = delete(Address).where(Address.id == addres_id)
+        await session.execute(query)
+        await session.commit()
+
+async def delete_event(event_id):
+    async with async_session() as session:
+        query = delete(Event).where(Event.id == event_id)
         await session.execute(query)
         await session.commit()

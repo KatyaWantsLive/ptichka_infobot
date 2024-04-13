@@ -24,8 +24,8 @@ work_sitekb = InlineKeyboardMarkup(inline_keyboard=[
 ])
 
 eventkb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text='добавить ивент', callback_data='add_event')],
-    [InlineKeyboardButton(text='Удалить ивент', callback_data='delete_event')],
+    [InlineKeyboardButton(text='Добавить мероприятие', callback_data='add_event')],
+    [InlineKeyboardButton(text='Удалить мероприятие', callback_data='delete_event')],
     [InlineKeyboardButton(text = 'Назад', callback_data='to_select')]
 ])
 

@@ -10,6 +10,6 @@ main_admin = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text='Правила сдачи')],
     [KeyboardButton(text='Контакты')],
     [KeyboardButton(text='О нас')],
-    [KeyboardButton(text='АдМиНкА')]],
+    [KeyboardButton(text='Админ Панель')]],
                            resize_keyboard=True,
                            input_field_placeholder='Выберите пункт меню...')

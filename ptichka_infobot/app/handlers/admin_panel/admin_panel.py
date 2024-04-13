@@ -21,7 +21,6 @@ class Add_event(StatesGroup):
 
 @router.callback_query(F.data == 'make_changes')
 async def make_changes(callback: CallbackQuery):
-    print('hello')
     await callback.answer('')
     await callback.message.edit_text('Куда внести изменения?', reply_markup=kb.changeskb)
     

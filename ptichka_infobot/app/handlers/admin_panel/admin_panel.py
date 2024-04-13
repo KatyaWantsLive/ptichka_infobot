@@ -53,13 +53,13 @@ async def to_select(callback: CallbackQuery):
 @router.callback_query(F.data == 'delete')
 async def delete(callback: CallbackQuery):
     await callback.answer('')
-    await callback.message.edit_text('сука что удалить надо то блять?', reply_markup=await kb.addreses())
+    await callback.message.edit_text('Что нужно удалить?', reply_markup=await kb.addreses())
 
 
 @router.callback_query(F.data == 'change_available')
 async def change_available(callback: CallbackQuery):
     await callback.answer('')
-    await callback.message.edit_text('выбери что менять пидор', reply_markup=await kb.addreses_to_make())
+    await callback.message.edit_text('Что нужно измениьт?', reply_markup=await kb.addreses_to_make())
 
 
 @router.callback_query(F.data == 'add')
@@ -80,7 +80,7 @@ async def add_two(message: Message, state: FSMContext):
 async def two_three(message: Message, state: FSMContext):
     await state.update_data(description = message.text)
     await set_addres(await state.get_data())
-    await message.answer('Пошел нахуй', reply_markup=kb.work_sitekb)
+    await message.answer('Добавить описание работы', reply_markup=kb.work_sitekb)
     await state.clear()
 
 
@@ -100,12 +100,12 @@ async def add_one_event(callback: CallbackQuery, state: FSMContext):
 async def add_two_event(message: Message, state: FSMContext):
     await state.update_data(name = message.text)
     await state.set_state(Add_event.description)
-    await message.answer(f'Введите опсиание ивента "перенос на некст строку через ."')
+    await message.answer(f'Введите описание мероприятия "перенос на некст строку через ."')
 
 
 @router.message(Add_event.description)
 async def two_three(message: Message, state: FSMContext):
     await state.update_data(description = message.text)
     await set_event(await state.get_data())
-    await message.answer('Пошел нахуй', reply_markup=kb.eventkb)
+    await message.answer('Добавить описание мероприятия', reply_markup=kb.eventkb)
     await state.clear()

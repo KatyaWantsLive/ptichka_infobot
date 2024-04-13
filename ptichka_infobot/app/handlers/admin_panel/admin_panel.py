@@ -5,7 +5,7 @@ from aiogram.types import Message, CallbackQuery
 from loader import router
 
 import app.keyboards.admin_panel_kb.adminkb as kb
-from app.db.requests import delete_address, set_addres, set_event
+from app.db.requests import delete_address, set_addres, set_event, delete_event
 
 
 router = Router()
@@ -21,7 +21,6 @@ class Add_event(StatesGroup):
 
 @router.callback_query(F.data == 'make_changes')
 async def make_changes(callback: CallbackQuery):
-    print('hello')
     await callback.answer('')
     await callback.message.edit_text('🤔Куда внести изменения?', reply_markup=kb.changeskb)
     
@@ -45,6 +44,13 @@ async def address_delete(callback: CallbackQuery):
     await callback.message.edit_text('🤔Что вы хотите сделать?', reply_markup=kb.work_sitekb)
 
 
+@router.callback_query(F.data.startswith('event_'))
+async def address_delete(callback: CallbackQuery):
+    await delete_event(callback.data[6:])
+    await callback.answer('')
+    await callback.message.edit_text('Что вы хотите сделать?', reply_markup=kb.eventkb)
+
+
 @router.callback_query(F.data == 'to_select')
 async def to_select(callback: CallbackQuery):
     await callback.answer('')
@@ -54,6 +60,12 @@ async def to_select(callback: CallbackQuery):
 async def delete(callback: CallbackQuery):
     await callback.answer('')
     await callback.message.edit_text('🤔Что нужно удалить?', reply_markup=await kb.addreses())
+
+
+@router.callback_query(F.data == 'delete_event')
+async def delete(callback: CallbackQuery):
+    await callback.answer('')
+    await callback.message.edit_text('Что нужно удалить?', reply_markup=await kb.event())
 
 
 @router.callback_query(F.data == 'change_available')

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-TOKEN = '7107505650:AAGAf34hXpi9-4yUESvQsh1QZhSwBqNgH30'
-=======
 TOKEN = 'TOKEN_HERE'
->>>>>>> 3806aebfbbb28a7aa276d8a6a5905225dc092346

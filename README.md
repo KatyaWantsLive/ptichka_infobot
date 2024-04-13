@@ -52,7 +52,7 @@
 
 ### Изображения в датасете:
 
-![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tenzors.png)
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/tensors.png)
 
 ### Точность:
 

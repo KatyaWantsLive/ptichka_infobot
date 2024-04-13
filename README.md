@@ -32,6 +32,16 @@
 
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/functions.png)
 
+### Демонстрация функционала
+1. Информация
+![]([https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/functions.png](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/4.gif))
+2. Админ панель
+![]([https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/functions.png](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/2.gif))
+3. Правила
+![]([https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/functions.png](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/1.gif))
+4. Классификация
+![]([https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/functions.png](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/3.gif))
+
 ## Структура Базы данных
 
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/dbgraph.png)

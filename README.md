@@ -34,7 +34,7 @@
 
 ### Демонстрация функционала
 1. Информация
-![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/4.gif)
+![Информация](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/4.gif)
 2. Админ панель
 ![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/2.gif)
 3. Правила

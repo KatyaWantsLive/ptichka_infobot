@@ -30,6 +30,6 @@ def defect(img):
     pred = prediction.cpu().detach().numpy()
     pred = np.exp(pred) / np.exp(pred).sum()
     lbl = np.argmax(pred)
-    return 'Пластик' if lbl == 0 else 'Металл'
+    return f'Это похоже на => {'Пластик' if lbl == 0 else 'Металл'}'
 
 image_path = 'D:/test/ptichka_infobot/2.jpg'

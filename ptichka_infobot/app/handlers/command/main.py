@@ -37,7 +37,7 @@ async def admin_panel(message: Message):
 
 @router.message(F.text == 'Определить тип вторсырья')
 async def photo_detect(message: Message, state: FSMContext):
-    await message.answer(f'жду фото...',)
+    await message.answer(f'Жду фото...',)
     # await state.set_state(Form.photo)
 
 @router.message(F.photo)

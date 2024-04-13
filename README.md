@@ -56,6 +56,12 @@
 
 ### Точность:
 
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/accuracy.png)
+
+### Пример ответа:
+
+![](https://github.com/KatyaWantsLive/ptichka_infobot/blob/main/metal.png)
+
 ## Cтек технологий
 ### Софт:
 - Архитектуры функций: Figma
